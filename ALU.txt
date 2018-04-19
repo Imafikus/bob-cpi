@@ -12,20 +12,20 @@
 
 0110 - cmp
 
-0111 - AND
+0111 - and
 
-1000 - OR
+1000 - or
 
-1001 - NEG
+1001 - neg
 
-1010 - XOR
+1010 - xor
 
-1011 - SHR
+1011 - shr
 
-1100 - SHL
+1100 - shl
 
-1101 - ROL
+1101 - ror
 
-1110 - ROR
+1110 - rol
 
 1111 - jmp(URM)
