@@ -1,0 +1,31 @@
+0000 LOAD (LOAD D S) registar <- registar
+
+0001 LOAD MEM (LOADM D S) registar <- memorija
+
+0010 STORE MEM (STORE D S) memorija <- registar
+
+0011 ADD (ADD X Y) akumulator <- registar + registar
+
+0100 SUB (SUB X Y) akumulator <- registar - registar
+
+0101 ZERO (ZERO X) registar <- 0
+
+0110 JMP EQUAL (JMPE X Y Z) linija <- ?(registar == registar)
+
+0111 SHL (SHL X Y) registar << registar
+
+1000 SHR (SHR X Y) registar >> registar
+
+1001 ROL (ROL X Y) registar <R< registar
+
+1010 ROR (ROR X Y) registar >R> registar
+
+1011 NEG (NEG X) -registar 
+
+1100 AND (ADD X Y) akumulator <- registar && registar
+
+1101 OR (OR X Y) akumulator <- registar || registar
+
+1110 NOOP pauza
+
+1111 END kraj
