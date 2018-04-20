@@ -51,7 +51,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <circuit name="Flags">
     <a name="circuit" val="Flags"/>
     <a name="clabel" val="FLAGS"/>
-    <a name="clabelup" val="east"/>
+    <a name="clabelup" val="north"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <path d="M141,35 Q145,45 149,35" fill="none" stroke="#808080" stroke-width="2"/>
