@@ -18,3 +18,6 @@ ZF - zero flag
 CF - carry flag
 OF - overflow flag
 PF - parity flag 
+
+####CU.circ####
+CU prima 16 bitnu komandu iz memorije pomocu koje formira adrese registara komande(A1,A2,A3) i adresu komande iz memorije podataka(M) i prosledjuje sve to u Aritmeticko logicku jedinicu koja obradjuje instrukciju.
