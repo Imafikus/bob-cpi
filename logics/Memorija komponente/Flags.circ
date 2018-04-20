@@ -99,8 +99,20 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(570,200)" to="(580,200)"/>
     <wire from="(630,200)" to="(640,200)"/>
     <wire from="(630,220)" to="(640,220)"/>
+    <comp lib="0" loc="(810,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="ZCOE_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="4" loc="(330,200)" name="D Flip-Flop">
       <a name="label" val="ZF"/>
+    </comp>
+    <comp lib="0" loc="(70,290)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ZCOE"/>
     </comp>
     <comp lib="0" loc="(790,140)" name="Splitter">
       <a name="facing" val="west"/>
@@ -108,35 +120,23 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="incoming" val="4"/>
       <a name="appear" val="center"/>
     </comp>
-    <comp lib="4" loc="(450,200)" name="D Flip-Flop">
-      <a name="label" val="CF"/>
-    </comp>
-    <comp lib="0" loc="(70,290)" name="Pin">
-      <a name="width" val="4"/>
+    <comp lib="0" loc="(50,30)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="ZCOP"/>
+      <a name="label" val="CLK"/>
     </comp>
     <comp lib="0" loc="(100,290)" name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
       <a name="appear" val="center"/>
     </comp>
+    <comp lib="4" loc="(680,200)" name="D Flip-Flop">
+      <a name="label" val="EF"/>
+    </comp>
+    <comp lib="4" loc="(450,200)" name="D Flip-Flop">
+      <a name="label" val="CF"/>
+    </comp>
     <comp lib="4" loc="(570,200)" name="D Flip-Flop">
       <a name="label" val="OF"/>
-    </comp>
-    <comp lib="0" loc="(810,140)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="label" val="ZCOP_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(50,30)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="CLK"/>
-    </comp>
-    <comp lib="4" loc="(680,200)" name="D Flip-Flop">
-      <a name="label" val="PF"/>
     </comp>
   </circuit>
 </project>

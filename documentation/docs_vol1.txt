@@ -9,15 +9,17 @@ Postoje dve adrese SRC i DEST, kad SRC nam kaze odakle biramo vrednost, koja se 
 
 Ako zelimo da uzmemo vrednost registra i dalje postoji izlaz, i to cemo da radimo kada pozovemo MOV nad istim registrom MOV(AX, AX) sigurno stavlja na izlaz vrednost iz AX i ne menja nista drugo.
 
+Ovde sada ima dva MUX-a da bi smo mogli da posaljemo dva outputa u isto vreme.
+
 
 Takodje, kako zelimo i da postoji mogucnost upisivanja konstanti, imamo multiplekser koji bira izmedju SRC registra i memorije.
 
 ####Flags.circ####
-4 * D f-f, redom idu ZF, CF, OF, PF, na udarac kloka upisuju se vrednosti iz ZCOP ulaza. ZCOP_out vraca trenutne vrednosti flegova
+4 * D f-f, redom idu ZF, CF, OF, EF, na udarac kloka upisuju se vrednosti iz ZCOE ulaza. ZCOE_out vraca trenutne vrednosti flegova
 ZF - zero flag
 CF - carry flag
 OF - overflow flag
-PF - parity flag 
+EF - equal flag 
 
 ####CU.circ####
-CU prima 16 bitnu komandu iz memorije pomocu koje formira adrese registara komande(A1,A2,A3) i adresu komande iz memorije podataka(M) i prosledjuje sve to u Aritmeticko logicku jedinicu koja obradjuje instrukciju.
+CU prima 16 bitnu komandu iz memorije pomocu koje formira adrese registara komande(A1,A2,A3) i adresu komande iz memorije podataka(M) i prosledjuje sve to u Aritmeticko logicku jedinicu koja obradjuje instrukciju. MUX u parseru nam kaze da li se koristi memorija za upis ili za ispis
