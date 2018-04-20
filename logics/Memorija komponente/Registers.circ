@@ -61,14 +61,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(110,510)" to="(400,510)"/>
     <wire from="(830,300)" to="(830,410)"/>
     <wire from="(1410,210)" to="(1420,210)"/>
-    <wire from="(1340,200)" to="(1420,200)"/>
     <wire from="(1220,300)" to="(1230,300)"/>
+    <wire from="(1340,200)" to="(1420,200)"/>
     <wire from="(1260,300)" to="(1270,300)"/>
-    <wire from="(640,140)" to="(640,300)"/>
     <wire from="(360,40)" to="(360,340)"/>
+    <wire from="(640,140)" to="(640,300)"/>
     <wire from="(280,470)" to="(490,470)"/>
-    <wire from="(1310,340)" to="(1380,340)"/>
     <wire from="(710,300)" to="(710,400)"/>
+    <wire from="(1310,340)" to="(1380,340)"/>
     <wire from="(200,270)" to="(220,270)"/>
     <wire from="(520,460)" to="(1360,460)"/>
     <wire from="(520,390)" to="(590,390)"/>
@@ -108,11 +108,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(900,560)" to="(900,610)"/>
     <wire from="(610,340)" to="(730,340)"/>
     <wire from="(520,410)" to="(830,410)"/>
-    <wire from="(730,340)" to="(850,340)"/>
     <wire from="(360,340)" to="(610,340)"/>
+    <wire from="(730,340)" to="(850,340)"/>
     <wire from="(1090,320)" to="(1090,340)"/>
-    <wire from="(850,340)" to="(970,340)"/>
     <wire from="(1290,300)" to="(1290,450)"/>
+    <wire from="(850,340)" to="(970,340)"/>
     <wire from="(1120,180)" to="(1420,180)"/>
     <wire from="(970,340)" to="(1090,340)"/>
     <wire from="(520,440)" to="(1220,440)"/>
@@ -152,14 +152,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="4" loc="(1330,300)" name="Register">
       <a name="label" val="P2"/>
     </comp>
-    <comp lib="4" loc="(1260,300)" name="Register">
-      <a name="label" val="P1"/>
-    </comp>
     <comp lib="0" loc="(160,430)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="SET"/>
       <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="4" loc="(1260,300)" name="Register">
+      <a name="label" val="P1"/>
     </comp>
     <comp lib="4" loc="(1110,300)" name="Register">
       <a name="label" val="PC"/>
@@ -201,6 +201,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(1400,300)" name="Register">
       <a name="label" val="P3"/>
+    </comp>
+  </circuit>
+  <circuit name="stagdo">
+    <a name="circuit" val="stagdo"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <comp loc="(400,120)" name="Registers"/>
+    <comp lib="0" loc="(230,110)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>
