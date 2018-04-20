@@ -147,22 +147,32 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(640,140)" to="(1420,140)"/>
     <wire from="(590,300)" to="(600,300)"/>
     <wire from="(630,300)" to="(640,300)"/>
-    <comp lib="4" loc="(1260,300)" name="Register">
-      <a name="label" val="P1"/>
+    <comp lib="4" loc="(750,300)" name="Register">
+      <a name="label" val="BX"/>
+    </comp>
+    <comp lib="4" loc="(870,300)" name="Register">
+      <a name="label" val="CX"/>
+    </comp>
+    <comp lib="0" loc="(110,510)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ADRESS"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="4" loc="(990,300)" name="Register">
+      <a name="label" val="DX"/>
     </comp>
     <comp lib="1" loc="(240,270)" name="NOT Gate">
       <a name="size" val="20"/>
     </comp>
-    <comp lib="0" loc="(1490,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
+    <comp lib="2" loc="(1460,180)" name="Multiplexer">
+      <a name="select" val="3"/>
       <a name="width" val="8"/>
-      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(360,40)" name="Pin">
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(900,610)" name="Pin">
+      <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="CLK"/>
+      <a name="label" val="Control"/>
       <a name="labelloc" val="north"/>
     </comp>
     <comp lib="4" loc="(630,300)" name="Register">
@@ -174,53 +184,33 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="SET"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="4" loc="(990,300)" name="Register">
-      <a name="label" val="DX"/>
-    </comp>
-    <comp lib="2" loc="(1460,180)" name="Multiplexer">
-      <a name="select" val="3"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="4" loc="(750,300)" name="Register">
-      <a name="label" val="BX"/>
-    </comp>
-    <comp lib="4" loc="(870,300)" name="Register">
-      <a name="label" val="CX"/>
-    </comp>
     <comp lib="2" loc="(480,430)" name="Demultiplexer">
       <a name="select" val="3"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(1490,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="4" loc="(1330,300)" name="Register">
       <a name="label" val="P2"/>
+    </comp>
+    <comp lib="4" loc="(1260,300)" name="Register">
+      <a name="label" val="P1"/>
     </comp>
     <comp lib="4" loc="(1110,300)" name="Register">
       <a name="label" val="PC"/>
     </comp>
-    <comp lib="0" loc="(900,610)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Control"/>
-      <a name="labelloc" val="north"/>
-    </comp>
     <comp lib="4" loc="(1400,300)" name="Register">
       <a name="label" val="P3"/>
     </comp>
-    <comp lib="0" loc="(110,510)" name="Pin">
-      <a name="width" val="3"/>
+    <comp lib="0" loc="(360,40)" name="Pin">
+      <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="ADRESS"/>
+      <a name="label" val="CLK"/>
       <a name="labelloc" val="north"/>
-    </comp>
-  </circuit>
-  <circuit name="stagdo">
-    <a name="circuit" val="stagdo"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
-    <a name="clabelfont" val="SansSerif plain 12"/>
-    <comp loc="(400,120)" name="Registers"/>
-    <comp lib="0" loc="(230,110)" name="Pin">
-      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>

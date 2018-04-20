@@ -1,0 +1,15 @@
+####Registers.circ####
+
+Sastoji se iz 8 8bitnih registara, redom obelezavaju AX, BX, CX, DX, PC, P1, P2, P3
+
+Postoje dva moda SET i GET
+
+Na ulazu se prima kontorlni bit koji kaze da li je SET ili GET, uvek se prima 3bitna rednost adrese registra i 8bitna vrednost koju koristimo ako setujemo nesto i dobija se ulaz od clocka
+
+U samom kolu postoji MUX koji u zavisnosti od adrese upisuje 8bitnu vrednost u registar koji ima datu 3bitnu adresu, takodje postoji MUX koji nam vraca vrednost iz datog registra ako GET-ujemo. Ako je kontrola 0 onda radi SET, inace radi GET, u zavisnosti od kontrolnog bita su MUX-evi enablovani ili ne.
+
+####ALU.circ#####
+Pogledati  ALU.TXT za komande, postoji bit provere za sabiranje i oduzimanje, sve pise u txt-u
+
+###Memory.circ####
+Radi upis ispis iz RAM memorije u zavisnosti od kontrolngo bita LD
