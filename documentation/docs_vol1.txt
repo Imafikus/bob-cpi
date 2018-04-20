@@ -3,23 +3,21 @@
 Sastoji se iz 8 8bitnih registara, redom obelezavaju AX, BX, CX, DX, PC, P1, P2, P3
 
 Radi komandu MOV registar <- registar
-Radi LOAD 
 
-Postoje tri adrese SRC1, SRC2 ta dva su nazivi/adrese registara i sluze za ispisivanje vrednosti, vrednosti se ispisuju pomocu dva MUX-a i DEST, koji kaze na koju adresu/registar cemo upisati vrednost. Za DEST postoji dekoder koj nam bira jednu od 8 adresa registara  
+
+Postoje dve adrese SRC i DEST, kad SRC nam kaze odakle biramo vrednost, koja se pusta na svaki registar, dok DEST ima dekoder koji ce enablovati samo odredjeni registar, tj. onaj u koji zelimo da upisemo stvari kada okinemo clock.
 
 Ako zelimo da uzmemo vrednost registra i dalje postoji izlaz, i to cemo da radimo kada pozovemo MOV nad istim registrom MOV(AX, AX) sigurno stavlja na izlaz vrednost iz AX i ne menja nista drugo.
-
-Ovde sada ima dva MUX-a da bi smo mogli da posaljemo dva outputa u isto vreme.
 
 
 Takodje, kako zelimo i da postoji mogucnost upisivanja konstanti, imamo multiplekser koji bira izmedju SRC registra i memorije.
 
 ####Flags.circ####
-4 * D f-f, redom idu ZF, CF, OF, EF, na udarac kloka upisuju se vrednosti iz ZCOE ulaza. ZCOE_out vraca trenutne vrednosti flegova
+4 * D f-f, redom idu ZF, CF, OF, PF, na udarac kloka upisuju se vrednosti iz ZCOP ulaza. ZCOP_out vraca trenutne vrednosti flegova
 ZF - zero flag
 CF - carry flag
 OF - overflow flag
-EF - equal flag 
+PF - parity flag 
 
 ####CU.circ####
-CU prima 16 bitnu komandu iz memorije pomocu koje formira adrese registara komande(A1,A2,A3) i adresu komande iz memorije podataka(M) i prosledjuje sve to u Aritmeticko logicku jedinicu koja obradjuje instrukciju. MUX u parseru nam kaze da li se koristi memorija za upis ili za ispis
+CU prima 16 bitnu komandu iz memorije pomocu koje formira adrese registara komande(A1,A2,A3) i adresu komande iz memorije podataka(M) i prosledjuje sve to u Aritmeticko logicku jedinicu koja obradjuje instrukciju. U kontrolnoj jedinici se koristi multipleksor koji odredjuje da li se podaci koriste za upis ili ispis. Kontrolna jedinica razlikuje komande za upis/ispis od ostalih, jer one koriste akumulator za upis/ispis.

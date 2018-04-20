@@ -63,6 +63,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="8" pin="150,240" width="8" x="46" y="56"/>
       <circ-port height="10" pin="1310,440" width="10" x="125" y="75"/>
       <circ-port height="8" pin="70,400" width="8" x="46" y="96"/>
+      <circ-port height="10" pin="390,90" width="10" x="125" y="85"/>
       <circ-anchor facing="east" height="6" width="6" x="127" y="67"/>
     </appear>
     <wire from="(600,340)" to="(720,340)"/>
@@ -167,6 +168,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1020,190)" to="(1180,190)"/>
     <wire from="(1280,440)" to="(1310,440)"/>
     <wire from="(970,260)" to="(1040,260)"/>
+    <wire from="(390,90)" to="(390,140)"/>
     <wire from="(970,310)" to="(980,310)"/>
     <wire from="(1040,300)" to="(1050,300)"/>
     <wire from="(1220,150)" to="(1240,150)"/>
@@ -198,18 +200,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(220,340)" to="(360,340)"/>
     <wire from="(1110,260)" to="(1110,300)"/>
     <wire from="(1040,310)" to="(1050,310)"/>
-    <comp lib="4" loc="(500,300)" name="Register">
-      <a name="label" val="BX"/>
+    <comp lib="4" loc="(380,300)" name="Register">
+      <a name="label" val="AX"/>
     </comp>
-    <comp lib="4" loc="(1080,300)" name="Register">
-      <a name="label" val="P2"/>
+    <comp lib="4" loc="(740,300)" name="Register">
+      <a name="label" val="DX"/>
     </comp>
-    <comp lib="0" loc="(1310,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
+    <comp lib="0" loc="(150,240)" name="Pin">
       <a name="width" val="8"/>
-      <a name="label" val="VALUE1"/>
-      <a name="labelloc" val="east"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="MEM"/>
     </comp>
     <comp lib="2" loc="(1280,440)" name="Multiplexer">
       <a name="select" val="3"/>
@@ -221,42 +221,39 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="DESTINATION"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(170,570)" name="Pin">
-      <a name="facing" val="north"/>
+    <comp lib="2" loc="(250,460)" name="Decoder">
+      <a name="select" val="3"/>
+    </comp>
+    <comp lib="0" loc="(70,360)" name="Pin">
+      <a name="width" val="3"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="SOURCE1"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="4" loc="(1080,300)" name="Register">
+      <a name="label" val="P2"/>
+    </comp>
+    <comp lib="4" loc="(1150,300)" name="Register">
+      <a name="label" val="P3"/>
+    </comp>
+    <comp lib="2" loc="(190,230)" name="Multiplexer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(390,90)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="AX"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(500,300)" name="Register">
+      <a name="label" val="BX"/>
     </comp>
     <comp lib="0" loc="(220,40)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="CLK"/>
       <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(70,400)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SOURCE2"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="2" loc="(250,460)" name="Decoder">
-      <a name="select" val="3"/>
-    </comp>
-    <comp lib="0" loc="(1310,440)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="VALUE2"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(620,300)" name="Register">
-      <a name="label" val="CX"/>
-    </comp>
-    <comp lib="0" loc="(150,240)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="MEM"/>
-    </comp>
-    <comp lib="2" loc="(190,230)" name="Multiplexer">
-      <a name="width" val="8"/>
     </comp>
     <comp lib="4" loc="(1010,300)" name="Register">
       <a name="label" val="P1"/>
@@ -265,23 +262,35 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="select" val="3"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="4" loc="(380,300)" name="Register">
-      <a name="label" val="AX"/>
+    <comp lib="0" loc="(70,400)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="SOURCE2"/>
+      <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="4" loc="(1150,300)" name="Register">
-      <a name="label" val="P3"/>
+    <comp lib="0" loc="(1310,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="VALUE1"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(740,300)" name="Register">
-      <a name="label" val="DX"/>
+    <comp lib="4" loc="(620,300)" name="Register">
+      <a name="label" val="CX"/>
+    </comp>
+    <comp lib="0" loc="(170,570)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(1310,440)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="VALUE2"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="4" loc="(860,300)" name="Register">
       <a name="label" val="PC"/>
-    </comp>
-    <comp lib="0" loc="(70,360)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="SOURCE1"/>
-      <a name="labelloc" val="north"/>
     </comp>
   </circuit>
 </project>
