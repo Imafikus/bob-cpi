@@ -4,9 +4,9 @@ C0001 LOAD MEM (LOAD S) akumulator <- memorija (4+8)
 
 C0010 STORE MEM (STORE S) memorija <- akumulator (4+8)
 
-C0011 ADD (ADD X Y) akumulator <- registar + registar (4+3+3)
+C0011 ADD (ADD D S) registar1 <- registar1 + registar2 (4+3+3)
 
-C0100 SUB (SUB X Y) akumulator <- registar - registar (4+3+3)
+C0100 SUB (SUB D S) registar1 <- registar1 - registar2 (4+3+3)
 
 C0101 ZERO (ZERO X) registar <- 0 (4+3)
 
