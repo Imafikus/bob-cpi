@@ -4,9 +4,15 @@ WORK C0001 LOAD MEM (LOAD S) akumulator <- memorija (4+8)
 
 WORK C0010 STORE MEM (STORE S) memorija <- akumulator (4+8)
 
+<<<<<<< HEAD
 WORK C0011 ADD (ADD S D) registar2 <- registar1 + registar2 (4+3+3)
 
 WORK C0100 SUB (SUB S D) registar2 <- registar1 - registar2 (4+3+3)
+=======
+WORK C0011 ADD (ADD D S) registar1 <- registar1 + registar2 (4+3+3)
+
+WORK C0100 SUB (SUB D S) registar1 <- registar1 - registar2 (4+3+3)
+>>>>>>> 94d4d9ed3869da877d04f6e36267d3f5b432b559
 
 WORK C0101 ZERO (ZERO X) registar <- 0 (4+3)
 
