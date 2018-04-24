@@ -1,14 +1,10 @@
-Proveriti kontrole iz ALU, da ALI i REG dele istu kontorlu za MOV (pitati momira sto tacno)
+1. Zavrsiti procesor
 
-Implementirati flegove
+2. Zapisati par trivijalnih masinskih kodova i testirati
 
-Povezati RAM sa ovim da radi lepo
+3. Napraviti korektnu dokumentaciju
 
-Napraviti CU
-
-napraviti brojac stanja
-
-Nakucati asembler
+#Zapoceti asembler
 
 
 
