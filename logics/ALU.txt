@@ -1,31 +1,31 @@
-C0000 MOV (MOV D S) registar <- registar (4+3+3)
+WORK C0000 MOV (MOV D S) registar <- registar (4+3+3)
 
-C0001 LOAD MEM (LOAD S) akumulator <- memorija (4+8)
+WORK C0001 LOAD MEM (LOAD S) akumulator <- memorija (4+8)
 
-C0010 STORE MEM (STORE S) memorija <- akumulator (4+8)
+WORK C0010 STORE MEM (STORE S) memorija <- akumulator (4+8)
 
-C0011 ADD (ADD X Y) akumulator <- registar + registar (4+3+3)
+WORK C0011 ADD (ADD S D) registar2 <- registar1 + registar2 (4+3+3)
 
-C0100 SUB (SUB X Y) akumulator <- registar - registar (4+3+3)
+WORK C0100 SUB (SUB S D) registar2 <- registar1 - registar2 (4+3+3)
 
-C0101 ZERO (ZERO X) registar <- 0 (4+3)
+WORK C0101 ZERO (ZERO X) registar <- 0 (4+3)
 
 C0110 JMP(JMP X) linija <- registar (4+3+1)
 
-C0111 SHL (SHL X Y) registar << registar (4+3+3)
+WORK C0111 SHL (SHL X Y) registar1 << registar2 (4+3+3)
 
-C1000 SHR (SHR X Y) registar >> registar (4+3+3)
+WORK C1000 SHR (SHR X Y) registar1 >> registar2 (4+3+3)
 
-C1001 ROL (ROL X Y) registar <R< registar (4+3+3)
+WORK C1001 ROL (ROL X Y) registar1 <R< registar2 (4+3+3)
 
-C1010 ROR (ROR X Y) registar >R> registar (4+3+3)
+WORK C1010 ROR (ROR X Y) registar1 >R> registar2 (4+3+3)
 
-C1011 NEG (NEG X) -registar (4+3)
+WORK C1011 NEG (NEG X) -registar (4+3)
 
-C1100 AND (ADD X Y) akumulator <- registar && registar (4+3+3)
+WORK C1100 AND (ADD X Y) akumulator <- registar && registar (4+3+3)
 
-C1101 OR (OR X Y) akumulator <- registar || registar (4+3+3)
+WORK C1101 OR (OR X Y) akumulator <- registar || registar (4+3+3)
 
-C1110 CMP (CMP X Y) EQUALS_FLAG <- registar == registar
+WORK C1110 CMP (CMP X Y) EQUALS_FLAG <- registar == registar
 
 C1111 END kraj (4)
