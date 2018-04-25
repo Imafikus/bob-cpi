@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
 This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0"/>
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
@@ -57,8 +63,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <path d="M141,35 Q145,45 149,35" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="52" stroke="#000000" stroke-width="2" width="50" x="120" y="35"/>
       <circ-port height="8" pin="50,30" width="8" x="116" y="46"/>
-      <circ-port height="8" pin="70,290" width="8" x="116" y="66"/>
       <circ-port height="10" pin="810,140" width="10" x="165" y="45"/>
+      <circ-port height="8" pin="80,290" width="8" x="116" y="56"/>
       <circ-anchor facing="east" height="6" width="6" x="167" y="47"/>
     </appear>
     <wire from="(400,220)" to="(400,290)"/>
@@ -76,10 +82,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(790,140)" to="(810,140)"/>
     <wire from="(120,300)" to="(280,300)"/>
     <wire from="(630,30)" to="(630,200)"/>
-    <wire from="(70,290)" to="(100,290)"/>
     <wire from="(120,290)" to="(400,290)"/>
     <wire from="(400,30)" to="(400,200)"/>
     <wire from="(520,30)" to="(520,200)"/>
+    <wire from="(80,290)" to="(100,290)"/>
     <wire from="(280,30)" to="(280,200)"/>
     <wire from="(400,200)" to="(410,200)"/>
     <wire from="(450,200)" to="(460,200)"/>
@@ -99,6 +105,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(570,200)" to="(580,200)"/>
     <wire from="(630,200)" to="(640,200)"/>
     <wire from="(630,220)" to="(640,220)"/>
+    <comp lib="0" loc="(80,290)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ZCOE"/>
+    </comp>
+    <comp lib="4" loc="(570,200)" name="D Flip-Flop">
+      <a name="label" val="OF"/>
+    </comp>
+    <comp lib="0" loc="(50,30)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLK"/>
+    </comp>
     <comp lib="0" loc="(810,140)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -106,13 +124,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ZCOE_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(330,200)" name="D Flip-Flop">
-      <a name="label" val="ZF"/>
+    <comp lib="4" loc="(450,200)" name="D Flip-Flop">
+      <a name="label" val="CF"/>
     </comp>
-    <comp lib="0" loc="(70,290)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ZCOE"/>
+    <comp lib="4" loc="(680,200)" name="D Flip-Flop">
+      <a name="label" val="EF"/>
     </comp>
     <comp lib="0" loc="(790,140)" name="Splitter">
       <a name="facing" val="west"/>
@@ -120,23 +136,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="incoming" val="4"/>
       <a name="appear" val="center"/>
     </comp>
-    <comp lib="0" loc="(50,30)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="CLK"/>
+    <comp lib="4" loc="(330,200)" name="D Flip-Flop">
+      <a name="label" val="ZF"/>
     </comp>
     <comp lib="0" loc="(100,290)" name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
       <a name="appear" val="center"/>
-    </comp>
-    <comp lib="4" loc="(680,200)" name="D Flip-Flop">
-      <a name="label" val="EF"/>
-    </comp>
-    <comp lib="4" loc="(450,200)" name="D Flip-Flop">
-      <a name="label" val="CF"/>
-    </comp>
-    <comp lib="4" loc="(570,200)" name="D Flip-Flop">
-      <a name="label" val="OF"/>
     </comp>
   </circuit>
 </project>
