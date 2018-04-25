@@ -16,7 +16,7 @@ U slucaju da se ne izvrsava operacija MOV, magistrala za MOV u procesorskoj memo
 
 ####Flags.circ####
 4 * D f-f, redom idu ZF, CF, OF, PF, na udarac kloka upisuju se vrednosti iz ZCOP ulaza. ZCOP_out vraca trenutne vrednosti flegova
-ZF - zero flag
+ZF - zero flag je NAJVECI BIT
 CF - carry flag
 OF - overflow flag
 PF - parity flag 
