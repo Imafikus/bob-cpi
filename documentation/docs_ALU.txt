@@ -1,9 +1,0 @@
-###ALU.circ###
-
-Aritmeticko logicka jedinica je napravlenja u odnosu na ALU.txt datoteku u kojoj su precizno definisane komande procesora. ALU prima vrednosti R1, R2(8-bitne vrednosti iz registara) i COM(4-bitnu vrednost komande) i na osnovu toga izracunava OUT i FL.
-Pa OUT i FL mozemo predstaviti kao funkcije:
-
-	OUT(R1, R2, COM)
-	FL(R1, R2, COM)
-
-Komande MOV, LOAD, STORE samo prosledjuje jer ne izvrsava nikakve logicko-aritmeticke operacije nad njima. Sve komponente ALU.circ jedinice se mogu naci u fajlu "ALU komponente" ili kao osnovne kapije iz LOGISIM-a.
