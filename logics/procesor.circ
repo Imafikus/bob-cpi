@@ -23,7 +23,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool name="Text Tool">
       <a name="text" val=""/>
       <a name="font" val="SansSerif plain 12"/>
-      <a name="halign" val="center"/>
+      <a name="halign" val="left"/>
       <a name="valign" val="base"/>
     </tool>
   </lib>
@@ -32,6 +32,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="file#Memorija komponente/Flags.circ" name="9"/>
   <lib desc="file#PC.circ" name="10"/>
   <lib desc="file#CU.circ" name="11"/>
+  <lib desc="file#ALU.circ" name="12">
+    <tool name="flag_filters">
+      <a name="facing" val="north"/>
+    </tool>
+  </lib>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -49,7 +54,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="6" name="Text Tool">
       <a name="text" val=""/>
       <a name="font" val="SansSerif plain 12"/>
-      <a name="halign" val="center"/>
+      <a name="halign" val="left"/>
       <a name="valign" val="base"/>
     </tool>
     <sep/>
@@ -160,45 +165,27 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(570,320)" to="(580,320)"/>
     <wire from="(540,130)" to="(550,130)"/>
     <wire from="(360,180)" to="(430,180)"/>
+    <comp lib="12" loc="(650,290)" name="ALU"/>
     <comp lib="1" loc="(460,180)" name="NOT Gate">
       <a name="size" val="20"/>
     </comp>
-    <comp lib="0" loc="(710,290)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="10" loc="(160,130)" name="main"/>
-    <comp lib="8" loc="(570,290)" name="Registers"/>
-    <comp lib="0" loc="(730,160)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="1" loc="(210,180)" name="NOT Gate">
-      <a name="facing" val="north"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(510,470)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="9" loc="(690,170)" name="Flags"/>
-    <comp lib="4" loc="(320,130)" name="RAM">
-      <a name="dataWidth" val="16"/>
-      <a name="bus" val="separate"/>
-    </comp>
-    <comp lib="4" loc="(540,130)" name="RAM">
-      <a name="bus" val="separate"/>
-    </comp>
-    <comp lib="0" loc="(60,260)" name="Clock">
-      <a name="label" val="CLK"/>
-    </comp>
     <comp lib="0" loc="(700,380)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(210,180)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="9" loc="(690,170)" name="Flags"/>
+    <comp lib="8" loc="(570,290)" name="Registers"/>
+    <comp lib="0" loc="(730,160)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
     </comp>
     <comp lib="0" loc="(740,160)" name="Pin">
       <a name="facing" val="west"/>
@@ -207,10 +194,29 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ZCOP"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(200,210)" name="Constant"/>
+    <comp lib="4" loc="(320,130)" name="RAM">
+      <a name="dataWidth" val="16"/>
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="4" loc="(540,130)" name="RAM">
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="0" loc="(710,290)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(60,260)" name="Clock">
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="11" loc="(190,370)" name="main"/>
     <comp lib="2" loc="(470,290)" name="Multiplexer">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="11" loc="(190,370)" name="main"/>
+    <comp lib="1" loc="(510,470)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(200,210)" name="Constant"/>
   </circuit>
 </project>
