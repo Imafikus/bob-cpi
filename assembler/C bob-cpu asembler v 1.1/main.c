@@ -182,14 +182,53 @@ void run(int i){  //funkcija koja se bavi obradom instrukcija
             return;
         }
         }
+}
+void initializeMemory(){
+    char fileName[100];
+    printf("Unesite putanju do slike memorije:\n");
+    scanf("%s",&fileName);
+    FILE *file=fopen(fileName,"r");
+    char linija[128];
+    char temp[10];
+    int i=0,j=0;
+    while (fgets(&linija,128,file)!=NULL) {
+        i=0;
+        while(i<strlen(linija))
+        {
+            sscanf(linija+i,"%s",temp);
+            i+=strlen(temp)+1;
+            memorija[j]=atoi(temp);
+            j++;
+        }
     }
+}
+void stampajRegistre(){
+    printf("Trenutno stanje registara:\n");
+    printf("AX %d\n",registri[0]);
+    printf("BX %d\n",registri[1]);
+    printf("CX %d\n",registri[2]);
+    printf("DX %d\n",registri[3]);
+    printf("PC %d\n",registri[4]);
+    printf("P1 %d\n",registri[5]);
+    printf("P2 %d\n",registri[6]);
+    printf("P3 %d\n",registri[7]);
+}
+void stampajMemoriju(){
+    printf("Trenutno stanje memorije:\n");
+    int i,j;
+    for (i=0;i<16;i++){
+        for (j=0;j<16;j++)
+            printf("%d ",memorija[i+j]);
+        printf("\n");
+    }
+}
 int main()
 {
     int j=0,i=0;
     i=loadInstructions(&instrukcije);
-    for(j=0;j<i;j++){
-        printf("%s\n",instrukcije[j]);
-    }
+    initializeMemory();
     run(i);
+    stampajRegistre();
+    stampajMemoriju();
     return 0;
 }
