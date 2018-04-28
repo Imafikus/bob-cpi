@@ -197,7 +197,7 @@ void initializeMemory(){
         {
             sscanf(linija+i,"%s",temp);
             i+=strlen(temp)+1;
-            memorija[j]=atoi(temp);
+            memorija[j]=toInt(atoi(temp));
             j++;
         }
     }
@@ -217,8 +217,9 @@ void stampajMemoriju(){
     printf("Trenutno stanje memorije:\n");
     int i,j;
     for (i=0;i<16;i++){
-        for (j=0;j<16;j++)
-            printf("%d ",memorija[i+j]);
+        for (j=0;j<16;j++){
+            printf("%02x ",memorija[16*i+j]);
+        }
         printf("\n");
     }
 }
