@@ -1,4 +1,4 @@
-C0000 MOV (MOV D S) registar <- registar (4+3+3)
+C0000 MOV (MOV S D) registar <- registar (4+3+3)
 
 C0001 LOAD MEM (LOAD S) akumulator <- memorija (4+8)
 
